@@ -1,0 +1,126 @@
+/*box model hack*/
+* {
+    box-sizing: border-box;
+
+}
+
+
+
+.clear {
+    clear: both;
+}
+
+/******************
+/*LAYOUT
+/***********************/
+/* aside {
+    display: block;
+} */
+
+header {
+    height: 150px;
+    background: gray;
+    border: 1px solid black;
+}
+
+
+
+header+main * {
+    float: left;
+    width: 45%;
+    clear: both;
+    display: block;
+
+}
+
+header>img+h1 {
+    padding-left: 5%;
+    display: inline;
+}
+
+header>img+h1+h3 {
+    padding-left: 3%;
+    display: inline;
+
+}
+
+header>img {
+    display: inline;
+    height: 80%;
+    width: 20%;
+    padding-left: 5%;
+    margin-top: 1%;
+}
+
+.main>#main {
+    height: 700px;
+}
+
+main>aside>h4 {
+    padding-left: 10%;
+}
+
+main>aside+section>h4 {
+    padding-left: 10%;
+}
+
+.main>aside {
+    float: left;
+    width: 75%;
+    color: white;
+    border: 2px solid green;
+    display: block;
+}
+
+main>aside+section+section {
+    padding-left: 3%;
+}
+
+main>aside+section+section+section {
+    padding-left: 3%;
+}
+
+main>aside+section+section+section+section {
+    padding-left: 3%;
+}
+
+body {
+    border: 2px solid black;
+    height: 1050px;
+}
+
+
+/* introduction of responsive website,desktop,laptop,tablet and mobile phones*/
+@media screen and (max-width:480px) {
+    section {
+        background: blue;
+    }
+}
+
+/*To make the blocks stack on each other*/
+@media screen and (max-width:600px) {
+
+    main>section,
+    section>article {
+        background: purple;
+        width: 100%;
+    }
+}
+
+@media(min-width:600px)and (max-width:900px) {
+    section>article {
+        background: green;
+        width: 100%;
+    }
+}
+
+@media(min-width:900px)and (max-width:1200px) {
+    section>article {
+        background: yellow;
+        width: 100%;
+    }
+}
+
+/************************
+ /*ADDITTIONAL STYLES
+ /*************************/
